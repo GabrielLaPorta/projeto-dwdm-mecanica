@@ -13,3 +13,136 @@ html {
     font-size: 20px;
     text-rendering: optimizeLegibility; /*otimiza a renderização da fonte para letura, tendo uma melhor qualidade*/
 }
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%; 
+    text-transform: uppercase;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: 300; 
+}
+
+.btn-ghost {
+    border: 1px solid #df1d16;
+    color: #df1d16;
+}
+
+.btn-full {
+    background-color: #df1d16;
+    border: 1px solid #df1d16;
+    color: #fff;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+}
+
+.btn-full:link,
+.btn-full:visited  {
+    background-color: #df1d16;
+    border: 1px solid #df1d16;
+    color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited  {
+    border: 1px solid #df1d16;
+    color: #df1d16;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #a0160c;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #a0160c;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #a0160c;
+    color: #fff;
+}
+
+.btn-full:link,
+.btn-full:visited  {
+    background-color: #df1d16;
+    border: 1px solid #df1d16;
+    color: #fff;
+    margin-right: 15px; /*espaçamento entre os btões*/
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px; /*colocar um espaçamento acima da logo para baixar ela*/
+}
+
+.main-nav {
+    float: right;
+    list-style: none; /*Se livra dos bullets - bolinhas pretas - marcadores*/
+    margin-top: 55px; /*colocar um espaçamento acima da lista para baixar ela*/
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px; /*espaçamento entre os items da lista*/
+}
+
+.main-nav li a {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #df1d16;
+}
