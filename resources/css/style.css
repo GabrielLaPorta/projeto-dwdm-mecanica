@@ -13,29 +13,45 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header.jpg);
-    background-size: cover;
-    height: 100vh;
-    background-position: center center;
-}
-
 .set-margin-row {
     margin-right: 0px;
     margin-left: 0px;
     height: 100%;
 }
 
-.hero-text-box {
-    position: absolute;
-    width: 1000px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* Header */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header.jpg);
+    background-size: cover;
+    height: 115vh;
+    width: 100%;
+    background-position: center center;
+    padding-bottom: 2%;
+    display: block;
 }
 
+.txt-principal {
+    margin-top: 40%;
+    animation-name: mover;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+} 
+
+@keyframes mover {
+    from {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+
+    to {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+/* Títulos */
 h1 {
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 20px;
     color: #fff;
     font-size: 240%; 
@@ -45,6 +61,26 @@ h1 {
     font-weight: 300; 
 }
 
+h2 {
+    color: #fff;
+    font-size: 190%; 
+    text-transform: uppercase;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #fff;
+    font-size: 100%; 
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: bold; 
+}
+
+/* Botões */
 .btn-ghost {
     border: 1px solid #df1d16;
     color: #df1d16;
@@ -103,27 +139,16 @@ h1 {
     margin-right: 15px;
 }
 
+/* Menu */
 .logo {
     height: 100px;
     width: auto;
     float: left;
-    margin-top: 20px;
 }
 
-.main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 55px;
-}
-
-.main-nav li {
-    display: inline-block;
-    margin-left: 40px;
-}
-
-.main-nav li a {
+.nav-link {
     padding: 8px 0;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
@@ -131,10 +156,10 @@ h1 {
     transition: border-bottom 0.2s;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
+.nav-link:link,
+.nav-link:visited {
     padding: 8px 0;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
@@ -142,9 +167,31 @@ h1 {
     transition: border-bottom 0.2s;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
+.nav-link:hover,
+.nav-link:active {
     border-bottom: 2px solid #df1d16;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.603);
+    height: 100px;
+    margin-bottom: 10%;
+}
+
+#menu {
+    margin-right: 10%;
+}
+
+@media only screen and (max-width: 767px) {
+    #menu {
+        background-color: rgb(13, 13, 13);
+        margin-right: 0%;
+        width: 100%;
+    }
+
+    nav {
+        height: 120px;
+    } 
 }
 
 /* Especializações */
