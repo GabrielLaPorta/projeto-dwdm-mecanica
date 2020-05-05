@@ -1,4 +1,3 @@
-/*Zerando bordas para ter maior domínio sobre os box*/
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +5,12 @@
 }
 
 html {
-    background-color: #fff; /*Define a cor do fundo*/
+    background-color: #fff;
     color: #555;
-    font-family: 'Lato', 'Arial', sans-serif; /*a terceira opção é qualquer fonte daquela família, note que o nome da família não esta entre aspas.*/
-    font-weight: 300; /*de acordo com a fonte que importamos*/
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
     font-size: 20px;
-    text-rendering: optimizeLegibility; /*otimiza a renderização da fonte para letura, tendo uma melhor qualidade*/
+    text-rendering: optimizeLegibility;
 }
 
 header {
@@ -21,9 +20,10 @@ header {
     background-position: center center;
 }
 
-.row {
-    max-width: 1140px;
-    margin: 0 auto 0 auto;
+.set-margin-row {
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 100%;
 }
 
 .hero-text-box {
@@ -100,25 +100,25 @@ h1 {
     background-color: #df1d16;
     border: 1px solid #df1d16;
     color: #fff;
-    margin-right: 15px; /*espaçamento entre os btões*/
+    margin-right: 15px;
 }
 
 .logo {
     height: 100px;
     width: auto;
     float: left;
-    margin-top: 20px; /*colocar um espaçamento acima da logo para baixar ela*/
+    margin-top: 20px;
 }
 
 .main-nav {
     float: right;
-    list-style: none; /*Se livra dos bullets - bolinhas pretas - marcadores*/
-    margin-top: 55px; /*colocar um espaçamento acima da lista para baixar ela*/
+    list-style: none;
+    margin-top: 55px;
 }
 
 .main-nav li {
     display: inline-block;
-    margin-left: 40px; /*espaçamento entre os items da lista*/
+    margin-left: 40px;
 }
 
 .main-nav li a {
@@ -145,4 +145,61 @@ h1 {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #df1d16;
+}
+
+/* Especializações */
+@media only screen and (max-width: 767px) {
+    #especializacoes {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 3%;
+    }
+}
+
+#especializacoes > div >div > h2{
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    #especializacoes {
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+        padding-bottom: 3%;
+    }
+}
+
+.img-especializacoes {
+    height: 100px;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.item-especializacoes:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.item-especializacoes {
+    margin-top: 5%;
+}
+
+.txt-especializacoes {
+    position: relative;
+    top: 15px;
+    left: 0px;
+    text-align: center;
+    padding-top: 4%;
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    text-transform: uppercase;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+.titulo-section {
+    margin-top: 110px;
+    margin-left: 5%;
 }
