@@ -24,13 +24,13 @@
                         <div class="navbar-collapse collapse" id="menu">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#especializacoes">Especializações</a>
+                                    <a class="nav-link" href="#tt-especializacoes">Especializações</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#imagens">Imagens</a>
+                                    <a class="nav-link" href="#tt-imagens">Imagens</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Sobre</a>
+                                    <a class="nav-link" href="#tt-cidade">Cidades Atendidas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contatos">Contatos</a>
@@ -48,10 +48,12 @@
             </div>
         </header>
     
-        <section class="container-fluid" id="especializacoes">
+        <section id="especializacoes">
+            <div class="col-12 titulos" id="tt-especializacoes">
+                <h2>Especializações</h2>
+            </div>
             <div class="row set-margin-row">
                 <div class="col-12 col-md-10 offset-md-1">
-                    <h2 class="titulo-section">Especializações</h2>
                     <div class="row">
                         <div class="col-12 col-md-4 item-especializacoes">
                             <img class="img-especializacoes" src="resources/img/icons/016-wheel.png" alt="icone de roda">
@@ -85,7 +87,9 @@
         </section>
 
         <section id="imagens">
-            <h2>Imagens</h2>
+            <div class="col-12 titulos" id="tt-imagens">
+                <h2>Imagens</h2>
+            </div>
             <div id="slider-imagens" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#slider-imagens" data-slide-to="0" class="active"></li>
@@ -115,6 +119,25 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+            </div>
+        </section>
+
+        <section id="cidade-atendida">
+            <div class="col-12 titulos" id="tt-cidade">
+                <h2>Estamos Atendendo na Cidade de Viamão</h2>
+            </div>
+            <div class="row set-margin-row">
+                <div class="col-12 col-md-4 offset-md-2">
+                    <img src="resources/img/Itapua.jpg" alt="imagem itapuã" id="imagem-cidade">
+                </div>
+                <div class="col-12 col-md-5" id="endereco">
+                    <p>
+                        <img src="resources/img/icons/pin.png" alt="icone de pino do mapa" id="icone-mapa">
+                        R. Lagoa Negra, 261,
+                        Itapuã, Viamão - RS 
+                        94750-000
+                    </p>
+                </div>
             </div>
         </section>
 
