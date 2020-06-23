@@ -347,7 +347,6 @@ nav {
 /* Depoimentos */
 #depoimentos {
     background-color: #ffffff;
-    height: 80vh;
     color: black;
 }
 
@@ -359,6 +358,9 @@ nav {
     margin-top: 7%;
     margin-left: 13%;
     color: black;
+}
+#depoimentos > div > div > p {
+    font-style: italic;
 }
 
 #depoimentos > div > h2 {
@@ -384,4 +386,38 @@ nav {
     #depoimentos > div.row {
         margin-top: 50%;
     }
+}
+
+@media only screen and (min-width: 768px) {
+    #depoimentos {
+        height: 100vh;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: rgb(68, 67, 67);
+    height: 100%;
+    color: white;
+}
+
+#mapa {
+    margin-top: 85px;
+}
+
+#informacoes-footer {
+    margin-top: 5%;
+    font-size: medium;
+}
+
+
+.icone-footer {
+    width: 100%;
+    margin-top: 45%;
+}
+
+
+.creditos {
+    font-size: x-small;
+    color: rgb(255, 255, 255);
 }
