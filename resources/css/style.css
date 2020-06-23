@@ -248,7 +248,7 @@ nav {
 
 @media only screen and (min-width: 768px) {
     #especializacoes {
-        height: 100vh;
+        height: 80vh;
     }
 }
 
@@ -257,6 +257,11 @@ nav {
     width: 40%;
     margin-left: 30%;
     margin-top: 5%;
+}
+
+.item-especializacoes {
+    height: 100%;
+    margin-bottom: 7%;
 }
 
 .item-especializacoes:hover{
@@ -299,7 +304,6 @@ nav {
 /* Cidade atendida */
 #cidade-atendida {
     background-color: #f50c04e3;
-    height: 100vh;
 }
 
 #imagem-cidade {
@@ -337,5 +341,47 @@ nav {
 
     #cidade-atendida > .row {
         margin-top: 5%;
+    }
+}
+
+/* Depoimentos */
+#depoimentos {
+    background-color: #ffffff;
+    height: 80vh;
+    color: black;
+}
+
+#depoimentos > div > h3 {
+    color: black;
+}
+
+#depoimentos > div > div > h3 {
+    margin-top: 7%;
+    margin-left: 13%;
+    color: black;
+}
+
+#depoimentos > div > h2 {
+    color: black
+}
+
+#depoimentos > div.row {
+    margin-top: 8%;
+    padding: 4%;
+}
+
+.icone-depoimentos {
+    width: 5%;
+}
+
+.imagem-depoimentos {
+    width: 10%;
+    border-radius: 100%;
+    float: left;
+}
+
+@media only screen and (max-width: 768px) {
+    #depoimentos > div.row {
+        margin-top: 50%;
     }
 }
