@@ -26,6 +26,7 @@ html {
     top: -70px;
     height: 90px;
     text-align: center;
+    scroll-margin-top: 30px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -224,8 +225,8 @@ nav {
     }
 
     .logo {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 92%;
     }
 }
 

@@ -12,33 +12,33 @@
     </head>
     <body>
         <header>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <a class="navbar-brand" href="#">
+                    <img src="resources/img/logo.png" alt="mecânica confiança logo" class="logo">
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation" id="btn-toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tt-especializacoes" onclick="onClickMenuOption()">Especializações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tt-imagens" onclick="onClickMenuOption()">Imagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tt-cidade" onclick="onClickMenuOption()">Cidades Atendidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tt-depoimentos" onclick="onClickMenuOption()">Depoimentos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
             <div class="row set-margin-row">
                 <div class="col-12 col-md-10 offset-md-1">
-                    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-                        <a class="navbar-brand" href="#">
-                            <img src="resources/img/logo.png" alt="mecânica confiança logo" class="logo">
-                        </a>
-                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menu"
-                            aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse" id="menu">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tt-especializacoes">Especializações</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tt-imagens">Imagens</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tt-cidade">Cidades Atendidas</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tt-depoimentos">Depoimentos</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
                     <div class="row txt-principal set-margin-row">
                         <div class="col-10 offset-1 col-md-9 offset-1 txt-animation">
                             <h1>Mecânica automotiva <br> Veículos em geral</h1>
@@ -251,6 +251,7 @@
             </div>
         </footer>
 
+        <script src="resources/js/menu.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
         </script>
