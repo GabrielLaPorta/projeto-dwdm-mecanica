@@ -1,0 +1,80 @@
+<section id="cad-produtos">
+    <h2 class="text-center">Produtos</h2><br><br><br>
+    <div class="row set-margin-row">
+        <div class="col-10 offset-1">
+            <form name="products">
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" 
+                         class="form-control" 
+                         id="nome" 
+                         maxlength="60" 
+                         required 
+                         data-ng-model="vm.products.nome">
+                </div>
+                <div class="form-group">
+                    <label for="descicao">Descrição</label>
+                    <textarea class="form-control" 
+                              id="descricao" 
+                              rows="3" 
+                              maxlength="120"
+                              data-ng-model="vm.products.descricao"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="valor">Preço (R$)</label>
+                    <input type="number" 
+                           class="form-control" 
+                           id="nome" 
+                           required
+                           max="92233720368547758"
+                           min="-92233720368547758"
+                           data-ng-model="vm.products.valor">
+                </div>
+                <div class="form-group">
+                  <label for="categorias">Categoria</label>
+                  <select class="form-control" 
+                          id="categorias" 
+                          data-ng-model="vm.products.categoryid"
+                          required>
+                        <option data-ng-repeat="category in vm.categories" value="{{category.id}}">{{category.nome}}</option>
+                  </select>
+                </div>
+                <button class="btn btn-success" 
+                        type="submit" 
+                        data-ng-click="vm.saveProducts()"
+                        data-ng-disabled="products.$invalid">Salvar</button>
+            </form>
+        </div>
+    </div>
+</section><br>
+
+<section id="produtos">
+    <div class="row set-margin-row">
+        <div class="col-10 offset-1">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="product in vm.gridProducts">
+                        <th>{{product.id}}</th>
+                        <td>{{product.nome}}</td>
+                        <td>{{product.descricao}}</td>
+                        <td>{{product.categoria}}</td>
+                        <td>{{product.valor | currency:"R$ "}}</td>
+                        <td><button class="btn btn-primary" data-ng-click="vm.updateProduct(product)">Editar</button></td>
+                        <td><button class="btn btn-danger" data-ng-click="vm.deleteProducts(product.id)">Deletar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" ui-sref="{{vm.isHome ? home.inicio : administrator.login}}">
+        <img src="/resources/img/logo.png" alt="mecânica confiança logo" class="logo">
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="menu">
+        <ul class="navbar-nav ml-auto" data-ng-if="vm.isHome">
+            <li class="nav-item">
+                <a class="nav-link" data-ng-click="vm.goToAnchor('tt-especializacoes')">Especializações</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-ng-click="vm.goToAnchor('tt-produtos')">Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-ng-click="vm.goToAnchor('tt-imagens')">Imagens</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-ng-click="vm.goToAnchor('tt-cidade')">Cidades Atendidas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-ng-click="vm.goToAnchor('tt-depoimentos')">Depoimentos</a>
+            </li>
+        </ul>
+    </div>
+    
+    <toast id="toast"></toast>
+    <button class="btn btn-secondary" id="btn-sair" data-ng-click="vm.logOut()" data-ng-if="vm.isAuthenticated">Sair</button>
+</nav>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-ng-app="mecanicaConfianca">
+<html lang="pt-br" data-ng-app="mecanicaConfiancaAdmin">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="node_modules/angularjs-toast/angularjs-toast.min.css" />
         <link rel="stylesheet" type="text/css" href="/resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/resources/css/style-admin.css">
         <link rel="manifest" href="manifest.json">
         <link rel="icon" href="/resources/img/logo.png" type="image/png">
         
@@ -14,8 +16,9 @@
         <title>Mecânica Confiança</title>
     </head>
     <body>
-        <menu></menu>
-        <div ui-view></div>
+        <menu-admin></menu-admin>
+
+        <div ui-view id="main"></div>
         
         <footer class="row set-margin-row" id="contatos">
             <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d659.4153735903852!2d-51.01463734641277!3d-30.282367677422265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95199575470b9661%3A0xf8d63c4d5d0a0f75!2zTWVjw6JuaWNhIENvbmZpYW7Dp2E!5e0!3m2!1spt-BR!2sbr!4v1588208661173!5m2!1spt-BR!2sbr" 
@@ -80,7 +83,7 @@
             <div class="col-12 col-md-10 offset-md-1 creditos">
                 <p>
                     Copyright © 2020 | Mecânica Confiança | 
-                    <a href="" onclick="location.href='admin/login'">
+                    <a ui-sref="administrator({reload: true})" data-ng-click="$root.isHome=false">
                         Admin
                     </a>
                 </p>
@@ -98,6 +101,7 @@
         <script src="node_modules/angular/angular.js"></script>
         <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
         <script src="node_modules/angular-resource/angular-resource.js"></script>
+        <script src="node_modules/angular-cookies/angular-cookies.js"></script>
         <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
         <script src="node_modules/angular-animate/angular-animate.min.js"></script>
         <script src="node_modules/angularjs-toast/angularjs-toast.min.js"></script>
@@ -110,18 +114,18 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
         </script>
-        <!-- Modules -->
-        <script src="app/app.module.js"></script>
-        <script src="app/app.route.js"></script>
-        <!-- Service Worker -->
-        <script src="swRegister.js"></script>
+         <!-- Modules -->
+        <script src="app/admin/app.module.js"></script>
+        <script src="app/admin/app.route.js"></script>    
         <!-- Config -->
-        <script src="app/home/core/config/resource.config.js"></script>
+        <script src="app/admin/core/config/resource.config.js"></script>
         <!-- Components -->
-        <script src="app/menu/menu.component.js"></script>
-        <script src="app/home/products/products.component.js"></script>
+        <script src="app/menu/admin/menu-admin.component.js"></script>
+        <script src="app/admin/screens/dashboard/dashboard.component.js"></script>
+        <script src="app/admin/screens/products/products.component.js"></script>
+        <script src="app/admin/screens/categories/categories.component.js"></script>
         <!-- Services -->
-        <script src="app/home/core/services/homeData.service.js"></script>
-        <script src="app/home/core/services/toaster.service.js"></script>
+        <script src="app/admin/core/services/adminData.service.js"></script>
+        <script src="app/admin/core/services/toaster.service.js"></script>
     </body>
  </html>

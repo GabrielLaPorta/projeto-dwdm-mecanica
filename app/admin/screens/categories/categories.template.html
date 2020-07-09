@@ -1,0 +1,47 @@
+<section id="cad-categorias">
+    <h2 class="text-center">Categorias</h2><br><br><br>
+    <div class="row set-margin-row">
+        <div class="col-10 offset-1">
+            <form name="categories">
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" 
+                         class="form-control" 
+                         id="nome" 
+                         maxlength="60" 
+                         required 
+                         data-ng-model="vm.categories.nome">
+                </div>
+                <button class="btn btn-success" 
+                        type="submit" 
+                        data-ng-click="vm.saveCategories()"
+                        data-ng-disabled="categories.$invalid">Salvar</button>
+            </form>
+        </div>
+    </div>
+</section><br>
+
+<section id="categorias">
+    <div class="row set-margin-row">
+        <div class="col-10 offset-1">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="category in vm.gridCategories">
+                        <th>{{category.id}}</th>
+                        <td>{{category.nome}}</td>
+                        <td><button class="btn btn-primary" data-ng-click="vm.updateCategory(category)">Editar</button></td>
+                        <td><button class="btn btn-danger" data-ng-click="vm.deleteCategories(category.id)">Deletar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

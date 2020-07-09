@@ -17,6 +17,18 @@
   },
   "homepage": "https://github.com/GabrielLaPorta/projeto-dwdm-mecanica#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "@uirouter/angularjs": "^1.0.18",
+    "angular": "^1.8.0",
+    "angular-animate": "^1.8.0",
+    "angular-cookies": "^1.8.0",
+    "angular-resource": "^1.7.0",
+    "angular-sanitize": "^1.8.0",
+    "angularjs-toast": "^4.0.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "pg": "^8.2.1"
   }
 }
